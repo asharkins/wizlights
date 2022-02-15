@@ -2,7 +2,8 @@ import asyncio
 from typing import List
 
 from pywizlight import wizlight, PilotBuilder, discovery
-from wizlight.my_bulbs import bulb_details
+from wizlight.my_bulbs import Group, bulb_details
+
 
 BROADCAST_ADDRESS = "192.168.1.255"
 
@@ -16,8 +17,10 @@ async def discover() -> List[wizlight]:
     return discovered_bulbs
     
 
-# async def all_off(bulbs: List[wizlight]):
-    
+async def toggle_bulbs_in_group(bulbs: List[wizlight], group: Group):
+    for bulb in bulbs:
+        import ipdb; ipdb.set_trace()
+        bulb.turn_on()    
 
 
 async def mess():
@@ -25,6 +28,7 @@ async def mess():
     
 
     found_bulbs = await discover()
+    await toggle_bulbs_in_group(found_bulbs, Group.LivingRoom)
 
     import ipdb; ipdb.set_trace()
 
