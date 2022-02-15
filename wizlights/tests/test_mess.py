@@ -1,5 +1,5 @@
+from wizlight.mess import mess
 
 
 def test_mess():
-    from wizlight import mess
-    
+    mess()    
