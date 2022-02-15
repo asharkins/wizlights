@@ -1,0 +1,18 @@
+[tool.poetry]
+name = "wizlights"
+version = "0.1.0"
+description = "Mess around with wizlights"
+authors = ["andyhasfins <andyharkins@gmail.com>"]
+
+[tool.poetry.dependencies]
+python = "^3.9"
+pywizlight = "^0.5.6"
+
+[tool.poetry.dev-dependencies]
+flake8 = "^4.0.1"
+autopep8 = "^1.6.0"
+ipdb = "^0.13.9"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
